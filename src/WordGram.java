@@ -90,7 +90,6 @@ public class WordGram {
 	public int hashCode(){
 		int myHash = 0;
 		if (this.myHash == 0) {
-			System.out.println("Calculating hashcode");
 			myHash = this.toString().hashCode();
 		}
 		return myHash;
@@ -103,14 +102,11 @@ public class WordGram {
 	 * @return WordGRam object with elements shifted left & last param added
 	 */
 	public WordGram shiftAdd(String last) {
-		System.out.println("last: " + last);
-		System.out.println("Array to modify: " + Arrays.toString(myWords));
 		String [] newWords = new String[myWords.length + 1];
 		for (int i = 0; i < myWords.length; i++) {
 			newWords[i] = myWords[i];
 		}
 		newWords[myWords.length] = last;
-		System.out.println("New array: " + Arrays.toString(newWords));
 		WordGram wg = new WordGram(newWords,1,newWords.length - 1);
 		return wg;
 	}
@@ -122,7 +118,6 @@ public class WordGram {
 	@Override
 	public String toString(){
 		if (this.myToString == null) {
-			System.out.println("calculating toString...");
 			myToString = String.join(" ", this.myWords);
 		}
 
