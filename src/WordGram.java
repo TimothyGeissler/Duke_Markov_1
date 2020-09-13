@@ -69,7 +69,7 @@ public class WordGram {
 				isEquals = false;
 			} else {
 				for (int i = 0; i < wg.myWords.length; i++) {
-					if (!this.myWords[0].equals(wg.myWords[0])) {
+					if (!this.myWords[i].equals(wg.myWords[i])) {
 						isEquals = false;
 					}
 				}
